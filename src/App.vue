@@ -1,32 +1,37 @@
 <template>
-  <img src="./logo.png">
-  <h1>Hello Vue 3!</h1>
-  <button @click="inc">Clicked {{ count }} times.</button>
+  <div>User: {{ user }}</div>
+  <div>Error? {{ loginError }}</div>
+  <button @click="login">Login</button>
+  <button @click="logout">Logout</button>
+
+  <hr />
+
+  <div>Doc: {{ doc }}</div>
+  <div>Loading? {{ loading }}</div>
+  <div>Error? {{ error }}</div>
 </template>
 
 <script>
 import { ref } from 'vue'
+import { useLogin, useUser, useDocument } from './composables/firebase'
 
 export default {
   setup() {
-    const count = ref(0)
-    const inc = () => {
-      count.value++
-    }
+    const { doc, error, loading } = useDocument('users', {
+      immediate: true,
+      documentId: 'jcJUmdiQsMgyG4OAKGkA'
+    })
+    const { login, logout } = useLogin()
+    const { user } = useUser()
 
     return {
-      count,
-      inc
+      doc,
+      error,
+      loading,
+      login,
+      logout,
+      user
     }
   }
 }
 </script>
-
-<style scoped>
-img {
-  width: 200px;
-}
-h1 {
-  font-family: Arial, Helvetica, sans-serif;
-}
-</style>

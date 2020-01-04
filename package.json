@@ -5,6 +5,7 @@
     "build": "webpack --env.prod"
   },
   "dependencies": {
+    "firebase": "^7.6.1",
     "vue": "^3.0.0-alpha.1"
   },
   "devDependencies": {
