@@ -1,7 +1,7 @@
-# vue-next-webpack-preview
+# vue-next-app
 
 Cloned from [here](https://github.com/vuejs/vue-next-webpack-preview)
 
-Minimal webpack setup for Vue 3 (alpha). This is for preview purposes only. There might be bugs and undocumented behavior differences from v2, which are expected.
+Testing out the Vue 3.0 alpha
 
-Also note that if you are using VSCode, Vetur isn't updated to take advantage of Vue 3's typing yet so intellisense in Vue files may not be fully functional (especially in templates).
+Firebase composables are based off of the code from [Aaron K Saunders](https://dev.to/aaronksaunders) great series on using the composition api with firebase ([here](https://dev.to/aaronksaunders/vuejs-composition-api-sample-app-w-video-d04))
