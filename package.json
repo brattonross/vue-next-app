@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "firebase": "^7.6.1",
+    "page": "^1.11.5",
     "vue": "^3.0.0-alpha.1"
   },
   "devDependencies": {
