@@ -39,7 +39,11 @@ module.exports = (env = {}) => ({
             loader: MiniCssExtractPlugin.loader,
             options: { hmr: !env.prod }
           },
-          'css-loader'
+          {
+            loader: 'css-loader',
+            options: { importLoaders: 1 }
+          },
+          'postcss-loader'
         ]
       }
     ]
